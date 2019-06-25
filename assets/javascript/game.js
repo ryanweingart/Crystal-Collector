@@ -1,10 +1,10 @@
 var log = console.log;
 var randomNumber = 0;
 var playerScore = 0;
-var blueCrystal = "";
-var orangeCrystal = "";
-var darkBlueCrystal = "";
-var redCrystal = "";
+var blueCrystal = 0;
+var orangeCrystal = 0;
+var darkBlueCrystal = 0;
+var redCrystal = 0;
 var wins = 0;
 var losses = 0;
 
@@ -33,8 +33,8 @@ $(".red").on("click", function () {
 function gameStarter () {
     var playerScore = 0;
 
-    // var  = Math.floor(Math.random() * 120) + 19;
-    log(hi);
+    var randomNumber = Math.floor(Math.random() * 102) + 19;
+    document.getElementById("random-number-text").innerHTML = randomNumber;
 
 
 }
@@ -43,3 +43,5 @@ function endGame () {
 
 
 }
+
+gameStarter ();
