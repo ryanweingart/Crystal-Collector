@@ -10,39 +10,43 @@ var losses = 0;
 
 
 
-$(".blue").one("click", function () {
-    var blueCrystal = Math.floor(Math.random() * 12) + 1;
-    log(blueCrystal);
-});
-
-$(".orange").one("click", function () {
-    var orangeCrystal = Math.floor(Math.random() * 12) + 1;
-    log(orangeCrystal);
-});
-
-$(".darkBlue").one("click", function () {
-    var darkBlueCrystal = Math.floor(Math.random() * 12) + 1;
-    log(darkBlueCrystal);
-});
-
-$(".red").one("click", function () {
-    var redCrystal = Math.floor(Math.random() * 12) + 1;
-    log(redCrystal);
-});
-
 function gameStarter () {
     var playerScore = 0;
 
     var randomNumber = Math.floor(Math.random() * 102) + 19;
     document.getElementById("random-number-text").innerHTML = randomNumber;
 
-
+    blueCrystal = Math.floor(Math.random() * 12) + 1;
+    orangeCrystal = Math.floor(Math.random() * 12) + 1;
+    darkBlueCrystal = Math.floor(Math.random() * 12) + 1;
+    redCrystal = Math.floor(Math.random() * 12) + 1;
 }
 
+function addCrystals (blueCrystal) {
+  
+
+    playerScore = playerScore + blueCrystal + orangeCrystal + darkBlueCrystal + redCrystal;
+    log(playerScore);
+}
 function endGame () {
 
 
 }
-
-
 gameStarter ();
+
+$("#blue").on("click", function () {
+    addCrystals (blueCrystal.value);
+    log(blueCrystal);
+});
+
+$("#orange").on("click", function () {
+    log(orangeCrystal);
+});
+
+$("#darkBlue").on("click", function () {
+    log(darkBlueCrystal);
+});
+
+$("#red").on("click", function () {
+    log(redCrystal);
+});
