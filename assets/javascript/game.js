@@ -10,22 +10,22 @@ var losses = 0;
 
 
 
-$(".blue").on("click", function () {
+$(".blue").one("click", function () {
     var blueCrystal = Math.floor(Math.random() * 12) + 1;
     log(blueCrystal);
 });
 
-$(".orange").on("click", function () {
+$(".orange").one("click", function () {
     var orangeCrystal = Math.floor(Math.random() * 12) + 1;
     log(orangeCrystal);
 });
 
-$(".darkBlue").on("click", function () {
+$(".darkBlue").one("click", function () {
     var darkBlueCrystal = Math.floor(Math.random() * 12) + 1;
     log(darkBlueCrystal);
 });
 
-$(".red").on("click", function () {
+$(".red").one("click", function () {
     var redCrystal = Math.floor(Math.random() * 12) + 1;
     log(redCrystal);
 });
@@ -43,5 +43,6 @@ function endGame () {
 
 
 }
+
 
 gameStarter ();
