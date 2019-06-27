@@ -35,18 +35,21 @@ function endGame () {
 gameStarter ();
 
 $("#blue").on("click", function () {
-    addCrystals (blueCrystal.value);
+    addCrystals (blueCrystal);
     log(blueCrystal);
 });
 
 $("#orange").on("click", function () {
+    addCrystals (orangeCrystal);
     log(orangeCrystal);
 });
 
 $("#darkBlue").on("click", function () {
+    addCrystals (darkBlueCrystal);
     log(darkBlueCrystal);
 });
 
 $("#red").on("click", function () {
+    addCrystals (redCrystal);
     log(redCrystal);
 });
