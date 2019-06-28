@@ -42,3 +42,16 @@ p {
     font-size: 40px;
     padding-top: 30px;
 }
+
+@media screen and (max-width: 1200px) {
+    .score {
+        width: 300px;
+    }
+
+    .jumbotron {
+        height: 300px;
+        padding-top: 0px;
+    }
+    
+}
+
