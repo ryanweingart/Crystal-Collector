@@ -22,11 +22,7 @@ function gameStarter () {
     redCrystal = Math.floor(Math.random() * 12) + 1;
 }
 
-function addCrystals (blueCrystal, orangeCrystal, darkBlueCrystal, redCrystal) {
-   
-    playerScore += blueCrystal + orangeCrystal + darkBlueCrystal + redCrystal;
-    log(playerScore);
-}
+
 function endGame () {
 
 
@@ -38,6 +34,7 @@ $("#blue").on("click", function () {
     // addCrystals (blueCrystal);
     log(blueCrystal);
     log(playerScore);
+    $("#playerScore-text").text(playerScore);
 });
 
 $("#orange").on("click", function () {
@@ -45,6 +42,7 @@ $("#orange").on("click", function () {
     // addCrystals (orangeCrystal);
     log(orangeCrystal);
     log(playerScore);
+    $("#playerScore-text").text(playerScore);
 
 });
 
@@ -53,6 +51,7 @@ $("#darkBlue").on("click", function () {
     // addCrystals (darkBlueCrystal);
     log(darkBlueCrystal);
     log(playerScore);
+    $("#playerScore-text").text(playerScore);
 
 });
 
@@ -61,5 +60,6 @@ $("#red").on("click", function () {
     // addCrystals (redCrystal);
     log(redCrystal);
     log(playerScore);
+    $("#playerScore-text").text(playerScore);
 
 });
