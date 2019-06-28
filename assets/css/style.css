@@ -1,4 +1,44 @@
+.jumbotron {
+    background-color: slategray;
+    height: 300px;
+    padding-top: 20px;
+}
+
+.display-4 {
+    /* height: 50%; */
+    font-size: 90px;
+    color: white;
+    text-shadow: 
+    -1px -1px 0 #f16d05,
+    1px -1px 0 #f16d05,
+    -1px 1px 0 #f16d05,
+     1px 1px 0 #f16d05;
+}
+
+p {
+    color: white;
+}
+
 .card-header {
     background-color: cadetblue;
     color: white;
+    font-size: 25px;
+}
+
+.score {
+    width: 400px;
+    height: 200px;
+}
+
+.record {
+    width: 150px;
+}
+
+#playerScore-text, #randomNumber-text {
+    font-size: 80px;
+}
+
+#wins-text, #losses-text {
+    font-size: 40px;
+    padding-top: 30px;
 }

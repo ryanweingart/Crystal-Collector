@@ -14,24 +14,38 @@ function gameStarter () {
     var playerScore = 0;
 
     var randomNumber = Math.floor(Math.random() * 102) + 19;
-    document.getElementById("random-number-text").innerHTML = randomNumber;
-
+    
     blueCrystal = Math.floor(Math.random() * 12) + 1;
     orangeCrystal = Math.floor(Math.random() * 12) + 1;
     darkBlueCrystal = Math.floor(Math.random() * 12) + 1;
     redCrystal = Math.floor(Math.random() * 12) + 1;
-}
+    
+    $("#randomNumber-text").text(randomNumber);
+    $("#playerScore-text").text(playerScore);
 
+}
 
 function endGame () {
 
+    if (playerScore > randomNumber) {
+        alert("You lose!");
+        losses++;
+        
+        gameStarter ();
+    } else if (playerScore === randomNumber) {
+        alert("You win!");
+        wins++;
+        gameStarter ();
+    }
+
 
 }
+
+
 gameStarter ();
 
 $("#blue").on("click", function () {
     playerScore += blueCrystal;
-    // addCrystals (blueCrystal);
     log(blueCrystal);
     log(playerScore);
     $("#playerScore-text").text(playerScore);
@@ -39,7 +53,6 @@ $("#blue").on("click", function () {
 
 $("#orange").on("click", function () {
     playerScore += orangeCrystal;
-    // addCrystals (orangeCrystal);
     log(orangeCrystal);
     log(playerScore);
     $("#playerScore-text").text(playerScore);
@@ -48,7 +61,6 @@ $("#orange").on("click", function () {
 
 $("#darkBlue").on("click", function () {
     playerScore += darkBlueCrystal;
-    // addCrystals (darkBlueCrystal);
     log(darkBlueCrystal);
     log(playerScore);
     $("#playerScore-text").text(playerScore);
@@ -57,9 +69,9 @@ $("#darkBlue").on("click", function () {
 
 $("#red").on("click", function () {
     playerScore += redCrystal;
-    // addCrystals (redCrystal);
     log(redCrystal);
     log(playerScore);
     $("#playerScore-text").text(playerScore);
 
 });
+
