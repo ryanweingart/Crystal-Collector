@@ -30,6 +30,7 @@ function gameStarter () {
 
 //Button click functions that add value of button to player score and calls endGame function to check if game has been won
 //--------------------------------------------------------------------------------------------------------------------------------------------------
+
 $("#blue").on("click", function () {
     playerScore += blueCrystal;
     endGame ();
@@ -56,6 +57,7 @@ $("#red").on("click", function () {
 
 //Function that checks if player score has matched random number to win or gone over random number to lose
 //--------------------------------------------------------------------------------------------------------------------------------------------------
+
 function endGame () {
 
     if (playerScore === randomNumber) {
