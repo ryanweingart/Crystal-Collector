@@ -20,7 +20,7 @@ p {
 }
 
 .card-header {
-    background-color: cadetblue;
+    background-color: slategray;
     color: white;
     font-size: 25px;
 }
@@ -34,6 +34,13 @@ p {
     width: 150px;
 }
 
+#playerScore-text {
+    color: cadetblue;
+}
+
+#randomNumber-text {
+    color: #f16d05;
+}
 #playerScore-text, #randomNumber-text {
     font-size: 80px;
 }
