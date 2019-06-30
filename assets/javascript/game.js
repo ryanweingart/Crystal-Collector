@@ -11,9 +11,9 @@ var losses = 0;
 
 
 function gameStarter () {
-    var playerScore = 0;
+    playerScore = 0;
 
-    var randomNumber = Math.floor(Math.random() * 102) + 19;
+    randomNumber = Math.floor(Math.random() * 102) + 19;
     
     blueCrystal = Math.floor(Math.random() * 12) + 1;
     orangeCrystal = Math.floor(Math.random() * 12) + 1;
@@ -22,19 +22,52 @@ function gameStarter () {
     
     $("#randomNumber-text").text(randomNumber);
     $("#playerScore-text").text(playerScore);
-
 }
+$("#blue").on("click", function () {
+    playerScore += blueCrystal;
+    endGame ();
+  
+    $("#playerScore-text").text(playerScore);
+});
+
+$("#orange").on("click", function () {
+    playerScore += orangeCrystal;
+    endGame ();
+
+    $("#playerScore-text").text(playerScore);
+
+});
+
+$("#darkBlue").on("click", function () {
+    playerScore += darkBlueCrystal;
+    endGame ();
+
+    $("#playerScore-text").text(playerScore);
+
+});
+
+$("#red").on("click", function () {
+    playerScore += redCrystal;
+    endGame ();
+
+    $("#playerScore-text").text(playerScore);
+
+});
 
 function endGame () {
 
-    if (playerScore > randomNumber) {
-        alert("You lose!");
-        losses++;
-        
-        gameStarter ();
-    } else if (playerScore === randomNumber) {
+   
+    if (playerScore === randomNumber) {
         alert("You win!");
         wins++;
+        $("#wins-text").text(wins);
+
+        gameStarter ();
+    } else if (playerScore > randomNumber) {
+        alert("You lose!");
+        losses++;
+        $("#losses-text").text(losses);
+
         gameStarter ();
     }
 
@@ -44,34 +77,5 @@ function endGame () {
 
 gameStarter ();
 
-$("#blue").on("click", function () {
-    playerScore += blueCrystal;
-    log(blueCrystal);
-    log(playerScore);
-    $("#playerScore-text").text(playerScore);
-});
 
-$("#orange").on("click", function () {
-    playerScore += orangeCrystal;
-    log(orangeCrystal);
-    log(playerScore);
-    $("#playerScore-text").text(playerScore);
-
-});
-
-$("#darkBlue").on("click", function () {
-    playerScore += darkBlueCrystal;
-    log(darkBlueCrystal);
-    log(playerScore);
-    $("#playerScore-text").text(playerScore);
-
-});
-
-$("#red").on("click", function () {
-    playerScore += redCrystal;
-    log(redCrystal);
-    log(playerScore);
-    $("#playerScore-text").text(playerScore);
-
-});
 
