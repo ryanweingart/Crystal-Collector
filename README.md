@@ -1,6 +1,8 @@
 # Crystal Collector
 https://ryanweingart.github.io/Crystal-Collector/
 
+![Image of game](https://github.com/ryanweingart/Crystal-Collector/blob/master/assets/images/Screen%20Shot%202019-08-05%20at%206.55.01%20PM.png)
+
 ## Overview
 
 Welcome to Crystal Collector! This is a memorization game where the player must match the computer's random score to win the game.
