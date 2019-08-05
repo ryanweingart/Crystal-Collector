@@ -1,1 +1,2 @@
-# Unit-4-Game
+# Crystal Collector
+Welcome to Crystal Collector! The goal of this game is to match the number that the computer picks for you by clicking the provided crystals. The computer picks a random number and displays it on the screen. Each crystal in the crystal box has its own hidden numerical value that will add to your score. Remember the value of each crystal you choose and choose each crystal wisely! If you go beyond the computer's number, you lose!
